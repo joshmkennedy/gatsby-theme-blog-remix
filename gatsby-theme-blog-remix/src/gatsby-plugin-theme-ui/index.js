@@ -14,6 +14,7 @@ export default merge({}, typography, {
   sizes: {
     container: 672,
   },
+  breakpoints: ["568px", "1100px", "1100px"],
   styles,
   prism,
 });

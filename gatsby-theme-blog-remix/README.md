@@ -83,7 +83,7 @@ module.exports = {
 ```
 
 
-<!-- Todos ( remove in production) 
+<!-- Todos ( remove in production) -->
 todo: [X] set up site to be remix with all site metadata
 todo: [X] add logo to blog header
 todo: [X] change primary colors to samon and orange
@@ -103,4 +103,3 @@ todo: [ ] copy and paste readme in all places
 todo: [ ] configure demo site index page to be a learning resource
 todo: [ ] deploy and setup on netlify
 todo: [ ] run through checklist
--->

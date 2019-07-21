@@ -8,6 +8,10 @@ export default {
     color: "white",
     fontFamily: `Montserrat`,
   },
+  Main: {
+    position: `relative`,
+  },
+
   pre: {
     variant: `prism`,
     fontFamily: `monospace`,
@@ -42,6 +46,8 @@ export default {
     borderColor: `muted`,
   },
   p: {
+    fontSize: `18px`,
+    lineHeight: `1.5`,
     code: {
       fontSize: `inherit`,
     },
@@ -61,5 +67,6 @@ export default {
   },
   h1: {
     fontWeight: 900,
+    marginBottom: 20,
   },
 };

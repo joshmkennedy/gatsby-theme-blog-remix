@@ -11,7 +11,7 @@ const lightGray = `hsla(0, 0%, 0%, 0.2)`;
 
 //remixes colors
 const samon = `#F86278`;
-const darkSamon = `hsl(351, 91%, 80%)`;
+const darkSamon = `#FA9EAC`;
 const yellow = `#FFE69B`;
 const lightBlue = `#E0DEFF`;
 

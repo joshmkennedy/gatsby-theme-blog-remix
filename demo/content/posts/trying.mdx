@@ -1,9 +1,20 @@
 ---
-title: "trying"
+title: "Example MDX"
 ---
 
 import { Link } from "gatsby"
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 
 # this is a title
 
-<Link to="/">home</Link>
+**And this is an example react component in mdx**
+
+<Link
+  to="/"
+  sx={{
+    color: `primary`,
+  }}
+>
+  This is a Gatsby Link component
+</Link>

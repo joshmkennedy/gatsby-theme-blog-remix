@@ -8,6 +8,7 @@ import {
   Main,
   Container,
   useColorMode,
+  useThemeUI,
   jsx,
   Flex,
 } from "theme-ui";
@@ -16,8 +17,9 @@ import sun from "../../assets/sun.png";
 import moon from "../../assets/moon.png";
 
 import Switch from "./switch";
-import { pipeFromArray } from "../../../../../../Library/Caches/typescript/3.5/node_modules/rxjs/internal/util/pipe";
 import GlobalStyles from "./GlobalStyles";
+import PageArtwork from "./PageArtwork";
+import Navigation from "./Navigation";
 
 const checkedIcon = (
   <img
@@ -79,42 +81,63 @@ const Layout = ({ children, location }) => {
       <GlobalStyles />
       <Header
         sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
           bg: `text`,
         }}
       >
-        <span>
-          <Link
-            className='logo'
-            to='/'
-            sx={{
-              textDecoration: "none",
-              color: `background`,
-            }}
-          >
-            {!isDark && data.darkLogo.publicURL ? (
-              <img
-                src={data.darkLogo.publicURL}
-                alt='logo'
-                css={{
-                  width: 24,
-                }}
-              />
-            ) : (
-              <img
-                src={data.logo.publicURL}
-                alt='logo'
-                css={{
-                  width: 28,
-                }}
-              />
-            )}
-            {data.site.siteMetadata.title}
-          </Link>
-        </span>
-        <span>
+        <div
+          sx={{
+            width: `container`,
+            mx: "auto",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <span>
+            <Link
+              className='logo'
+              to='/'
+              sx={{
+                textDecoration: "none",
+                color: `background`,
+              }}
+            >
+              {!isDark && data.darkLogo.publicURL ? (
+                <img
+                  src={data.darkLogo.publicURL}
+                  alt='logo'
+                  css={{
+                    width: 24,
+                  }}
+                />
+              ) : (
+                <img
+                  src={data.logo.publicURL}
+                  alt='logo'
+                  css={{
+                    width: 28,
+                  }}
+                />
+              )}
+              {data.site.siteMetadata.title}
+            </Link>
+          </span>
+          <Navigation />
+        </div>
+      </Header>
+      <Main>
+        <PageArtwork
+          css={{
+            zIndex: -1,
+          }}
+        />
+        <span
+          sx={{
+            position: `absolute`,
+            top: `5vh`,
+            right: `5vw`,
+          }}
+        >
           <Switch
             aria-label='Toggle dark mode'
             css={css({
@@ -126,9 +149,7 @@ const Layout = ({ children, location }) => {
             onChange={toggleColorMode}
           />
         </span>
-      </Header>
-      <Main>
-        <Container>{children}</Container>
+        <Container sx={{ maxWidth: `container` }}>{children}</Container>
       </Main>
     </StyledLayout>
   );

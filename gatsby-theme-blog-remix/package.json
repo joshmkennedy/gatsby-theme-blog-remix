@@ -17,6 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "@emotion/styled-base": "^10.0.14",
     "@mdx-js/mdx": "^1.0.21",
     "@mdx-js/react": "^1.0.21",
     "@theme-ui/prism": "^0.2.5",

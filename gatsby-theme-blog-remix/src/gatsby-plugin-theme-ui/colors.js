@@ -1,3 +1,4 @@
+//these are the original themes colors
 const purple60 = `#663399`;
 const purple30 = `#D9BAE8`;
 const grey90 = `#232129`;
@@ -8,11 +9,17 @@ const opaqueLightYellow = `rgba(255, 229, 100, 0.2)`;
 const opaqueLightWhite = `hsla(0, 0%, 100%, 0.2)`;
 const lightGray = `hsla(0, 0%, 0%, 0.2)`;
 
+//remixes colors
+const samon = `#F86278`;
+const darkSamon = `hsl(351, 91%, 80%)`;
+const yellow = `#FFE69B`;
+const lightBlue = `#E0DEFF`;
+
 export default {
   text: grey90,
   background: white,
-  primary: purple60,
-  secondary: black80,
+  primary: samon,
+  secondary: yellow,
   muted: lightGray,
   highlight: opaqueLightYellow,
   heading: grey90,
@@ -33,10 +40,10 @@ export default {
   },
   modes: {
     dark: {
-      text: lightWhite,
+      text: `white`,
       background: grey90,
-      primary: purple30,
-      secondary: lightWhite,
+      primary: darkSamon,
+      secondary: yellow,
       muted: opaqueLightWhite,
       highlight: purple60,
       heading: white,

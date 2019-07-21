@@ -84,13 +84,13 @@ module.exports = {
 
 
 <!-- Todos ( remove in production) 
-todo: [ ] set up site to be remix with all site metadata
-todo: [ ] add logo to blog header
-todo: [ ] change primary colors to samon and orange
+todo: [X] set up site to be remix with all site metadata
+todo: [X] add logo to blog header
+todo: [X] change primary colors to samon and orange
 todo: [ ] add menu to header
 todo: [ ] add mobil menu with portal
 todo: [ ] add artwork remix graphic
-todo: [ ] change favicon to grapic 
+todo: [x] change favicon to grapic 
 todo: [ ] create modal component to work in mdx
 todo: [ ] comment like crazy all code
   - [ ] components 

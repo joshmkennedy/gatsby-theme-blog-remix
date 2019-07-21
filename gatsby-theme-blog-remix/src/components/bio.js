@@ -5,20 +5,26 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import { Styled, css, Flex } from "theme-ui"
-import BioContent from "./bio-content.js"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
+import { Styled, css, Flex } from "theme-ui";
+import BioContent from "./bio-content.js";
 
 const Bio = () => {
-  const data = useStaticQuery(bioQuery)
+  const data = useStaticQuery(bioQuery);
   const {
     site: {
-      siteMetadata: { author },
+      siteMetadata: { author, shortBio, social },
     },
     avatar,
-  } = data
+  } = data;
+
+  //pulls our just the twitter info so we can use it in our short bio
+  //shadow this component to change
+  const twitterInfo = social.reduce(obj =>
+    obj.name === "twitter" ? obj : null
+  );
 
   return (
     <Flex css={css({ mb: 4 })}>
@@ -41,21 +47,30 @@ const Bio = () => {
             width: 48,
             borderRadius: 99999,
           })}
-          role="presentation"
+          role='presentation'
         />
       )}
       <Styled.p>
-        <BioContent />
+        <BioContent
+          author={author}
+          shortBio={shortBio}
+          socialURL={twitterInfo.url}
+        />
       </Styled.p>
     </Flex>
-  )
-}
+  );
+};
 
 const bioQuery = graphql`
   query BioQuery {
     site {
       siteMetadata {
         author
+        shortBio
+        social {
+          name
+          url
+        }
       }
     }
     avatar: file(absolutePath: { regex: "/avatar.(jpeg|jpg|gif|png)/" }) {
@@ -66,6 +81,6 @@ const bioQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Bio
+export default Bio;

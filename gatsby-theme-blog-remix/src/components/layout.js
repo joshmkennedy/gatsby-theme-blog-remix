@@ -1,5 +1,6 @@
 import React from "react";
 import { css, Global } from "@emotion/core";
+import Image from "gatsby-image";
 /** @jsx jsx */
 import {
   Layout as StyledLayout,
@@ -8,9 +9,9 @@ import {
   Container,
   useColorMode,
   jsx,
+  Flex,
 } from "theme-ui";
 import { graphql, useStaticQuery, Link } from "gatsby";
-
 import sun from "../../assets/sun.png";
 import moon from "../../assets/moon.png";
 
@@ -54,6 +55,14 @@ const Layout = ({ children, location }) => {
           title
         }
       }
+      logo: file(absolutePath: { regex: "/logo.(jpeg|jpg|gif|png|svg)/" }) {
+        publicURL
+      }
+      darkLogo: file(
+        absolutePath: { regex: "/logo-dark.(jpeg|jpg|gif|png|svg)/" }
+      ) {
+        publicURL
+      }
     }
   `);
 
@@ -64,7 +73,7 @@ const Layout = ({ children, location }) => {
     setColorMode(isDark ? `light` : `dark`);
   };
   //return the opposite of the color mode
-
+  console.log(data.darkLogo.publicURL);
   return (
     <StyledLayout>
       <GlobalStyles />
@@ -76,16 +85,35 @@ const Layout = ({ children, location }) => {
           bg: `text`,
         }}
       >
-        <Link
-          className='logo'
-          to='/'
-          sx={{
-            textDecoration: "none",
-            color: `background`,
-          }}
-        >
-          {data.site.siteMetadata.title}
-        </Link>
+        <span>
+          <Link
+            className='logo'
+            to='/'
+            sx={{
+              textDecoration: "none",
+              color: `background`,
+            }}
+          >
+            {!isDark && data.darkLogo.publicURL ? (
+              <img
+                src={data.darkLogo.publicURL}
+                alt='logo'
+                css={{
+                  width: 24,
+                }}
+              />
+            ) : (
+              <img
+                src={data.logo.publicURL}
+                alt='logo'
+                css={{
+                  width: 28,
+                }}
+              />
+            )}
+            {data.site.siteMetadata.title}
+          </Link>
+        </span>
         <span>
           <Switch
             aria-label='Toggle dark mode'

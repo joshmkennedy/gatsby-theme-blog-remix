@@ -11,6 +11,12 @@ import Image from "gatsby-image";
 import { Styled, css, Flex } from "theme-ui";
 import BioContent from "./bio-content.js";
 
+/**
+ * bio: pulls siteMetadata (from gatsby-config), and your avatar (from the assets folder)
+ * make sure your avatar is named avatar or it will not be pulled in.
+ * see readme for more information
+ */
+
 const Bio = () => {
   const data = useStaticQuery(bioQuery);
   const {
@@ -20,7 +26,10 @@ const Bio = () => {
     avatar,
   } = data;
 
-  //pulls our just the twitter info so we can use it in our short bio
+  /**
+   * to be used in the author's name link
+   * currently the authors link pulls in their twitter profile
+   */
   //shadow this component to change
   const twitterInfo = social.reduce(obj =>
     obj.name === "twitter" ? obj : null

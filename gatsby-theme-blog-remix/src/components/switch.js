@@ -1,7 +1,8 @@
-import React from "react"
-import ReactSwitch from "react-switch"
-import { css } from "theme-ui"
+import React from "react";
+import ReactSwitch from "react-switch";
+import { css } from "theme-ui";
 
+/* this is the toggle used in the darkmode toggle */
 export const Switch = props => (
   <ReactSwitch
     {...props}
@@ -9,7 +10,7 @@ export const Switch = props => (
       bg: `primary`,
     })}
   />
-)
+);
 
 Switch.defaultProps = {
   checkedIcon: false,
@@ -20,6 +21,6 @@ Switch.defaultProps = {
   offColor: `#000`,
   onColor: `#000`,
   boxShadow: `inset 0 0 0 1px #000`,
-}
+};
 
-export default Switch
+export default Switch;

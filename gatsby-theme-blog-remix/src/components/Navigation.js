@@ -1,32 +1,54 @@
 import React from "react";
-import { css } from "@emotion/core";
 import styled from "@emotion/styled";
+import { css } from "@emotion/core";
 /** @jsx jsx */
-import { useThemeUI, jsx } from "theme-ui";
-import { Link, useStaticQuery, qraphql } from "gatsby";
+import { useThemeUI, jsx, useColorMode } from "theme-ui";
 
-import ModalIcon from "./elements/ModalIcon";
+import Icon from "./elements/Icon";
 import Toggle from "./elements/Toggle";
 import Modal from "./elements/Modal";
+import NavLinks from "./NavLinks";
+
+/* shadow me if you need to change the layout of the desktop navigation and mobile navigation  */
+/* to change the nagigation Links shadow NagigationLinks component */
 
 export default function Navigation() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          social {
-            name
-            url
-          }
-        }
-      }
-    }
-  `);
+  const [colorMode, setColorMode] = useColorMode();
+  const isDark = colorMode === `dark`;
 
   //gets access to the theme object from theme-ui
   const context = useThemeUI();
   const { theme } = context;
   const { primary, background } = theme.colors;
+  const breakpoint = theme.breakpoints[0];
+  //styles for the navigation
+  const styles = css`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li {
+      a {
+        font-family: ${theme.fonts.heading};
+        text-decoration: none;
+        color: ${isDark ? primary : background};
+      }
+      list-style: none;
+      margin-left: 20px;
+    }
+    @media (max-width: ${breakpoint}) {
+      flex-direction: column;
+      align-items: start;
+      li {
+        a {
+          color: ${primary};
+          text-decoration: none;
+        }
+        list-style: none;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+      }
+    }
+  `;
 
   return (
     <>
@@ -36,16 +58,7 @@ export default function Navigation() {
           color: `background`,
         }}
       >
-        <NavLinks linkColor={background}>
-          <li key='about'>
-            <Link to='/about'>about</Link>
-          </li>
-          {data.site.siteMetadata.social.map(({ name, url }) => (
-            <li key={url}>
-              <a href={url}>{name}</a>
-            </li>
-          ))}
-        </NavLinks>
+        <NavLinks linkColor={background} styles={styles} />
       </nav>
       <Toggle>
         {({ toggle, on }) => (
@@ -57,26 +70,13 @@ export default function Navigation() {
               css={{ background: "transparent", border: "none" }}
               onClick={toggle}
             >
-              <ModalIcon color={primary} />
+              <Icon color={primary} name='mobile' />
             </button>
             {on && (
               <Modal iconColor={primary} toggle={toggle}>
-                <MobileNav
-                  linkColor={theme.colors.primary}
-                  sx={{
-                    fontFamily: `heading`,
-                    color: `primary`,
-                  }}
-                >
-                  <li key='about'>
-                    <Link to='/about'>about</Link>
-                  </li>
-                  {data.site.siteMetadata.social.map(({ name, url }) => (
-                    <li key={url}>
-                      <a href={url}>{name}</a>
-                    </li>
-                  ))}
-                </MobileNav>
+                <nav>
+                  <NavLinks linkColor={theme.colors.primary} styles={styles} />
+                </nav>
               </Modal>
             )}
           </>
@@ -85,27 +85,3 @@ export default function Navigation() {
     </>
   );
 }
-const MobileNav = styled.ul`
-  li {
-    a {
-      color: ${props => props.linkColor};
-      text-decoration: none;
-    }
-    list-style: none;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-  }
-`;
-const NavLinks = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  li {
-    a {
-      text-decoration: none;
-      color: ${props => props.linkColor};
-    }
-    list-style: none;
-    margin-left: 20px;
-  }
-`;

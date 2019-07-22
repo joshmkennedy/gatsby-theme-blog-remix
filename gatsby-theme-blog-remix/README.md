@@ -87,15 +87,15 @@ module.exports = {
 todo: [X] set up site to be remix with all site metadata
 todo: [X] add logo to blog header
 todo: [X] change primary colors to samon and orange
-todo: [ ] add menu to header
-todo: [ ] add mobil menu with portal
-todo: [ ] add artwork remix graphic
+todo: [X] add menu to header
+todo: [X] add mobil menu with portal
+todo: [X] add artwork remix graphic
 todo: [x] change favicon to grapic 
 todo: [ ] create modal component to work in mdx
 todo: [ ] comment like crazy all code
   - [ ] components 
   - [ ] templates
-  - [ ] config
+  - [x] config
   - [ ] gatsby node
   - [ ] theme ui
 todo: [ ] create a real readme

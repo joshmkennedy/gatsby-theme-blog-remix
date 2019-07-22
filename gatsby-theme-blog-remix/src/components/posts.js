@@ -6,6 +6,8 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Footer from "../components/home-footer";
 
+/* post archive layout */
+
 const Posts = ({ location, posts, siteTitle, socialLinks }) => (
   <Layout location={location} title={siteTitle}>
     {posts.map(({ node }) => {

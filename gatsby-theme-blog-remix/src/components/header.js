@@ -8,6 +8,11 @@ import moon from "../../assets/moon.png";
 
 const rootPath = `${__PATH_PREFIX__}/`;
 
+/* this component was used in the original gatsby theme blog.
+the remix has taken peices from it but is not using it in its entirety 
+however this is a good example of conditionally rendering things based on location
+*/
+
 const Title = ({ children, location }) => {
   if (location.pathname === rootPath) {
     console.log(true);

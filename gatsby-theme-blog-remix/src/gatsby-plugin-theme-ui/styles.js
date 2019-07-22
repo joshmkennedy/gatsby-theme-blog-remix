@@ -66,7 +66,9 @@ export default {
     },
   },
   h1: {
-    fontWeight: 900,
-    marginBottom: 20,
+    fontFamily: `heading`,
+  },
+  h2: {
+    fontFamily: `heading`,
   },
 };

@@ -1,8 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
-import { css, Styled, Flex } from "theme-ui"
+import React from "react";
+import { Link } from "gatsby";
+import { css, Styled, Flex } from "theme-ui";
 
-import Bio from "../components/bio"
+import Bio from "../components/bio";
+
+/* shows on the post singles
+displays an avatar image and pulls in some siteMetadata
+ */
 
 const Footer = ({ previous, next }) => (
   <footer
@@ -15,7 +19,7 @@ const Footer = ({ previous, next }) => (
     <Bio />
     {(previous || next) && (
       <Flex
-        as="ul"
+        as='ul'
         css={{
           flexWrap: `wrap`,
           justifyContent: `space-between`,
@@ -25,14 +29,14 @@ const Footer = ({ previous, next }) => (
       >
         <li>
           {previous && (
-            <Styled.a as={Link} to={previous.node.slug} rel="prev">
+            <Styled.a as={Link} to={previous.node.slug} rel='prev'>
               ← {previous.node.title}
             </Styled.a>
           )}
         </li>
         <li>
           {next && (
-            <Styled.a as={Link} to={next.node.slug} rel="next">
+            <Styled.a as={Link} to={next.node.slug} rel='next'>
               {next.node.title} →
             </Styled.a>
           )}
@@ -40,6 +44,6 @@ const Footer = ({ previous, next }) => (
       </Flex>
     )}
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

@@ -1,8 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { css } from "@emotion/core";
 /** @jsx jsx */
 import { jsx } from "theme-ui";
+
+/* Shadow me to change, or remove the artwork   */
 
 const PageArtwork = () => {
   const data = useStaticQuery(graphql`

@@ -1,21 +1,24 @@
-import React from "react";
 import styled from "@emotion/styled";
 /**@jsx jsx */
 import { jsx } from "theme-ui";
 import Portal from "./Portal";
 import Icon from "./Icon";
 
-const Modal = ({ children, toggle, iconColor, modalColor }) => {
+//this modal is using styles that makes it a half page wide overlay.
+//please shadow if need it for something other than mobile nav
+const Modal = ({ children, toggle, iconColor }) => {
   return (
+    /* uses Portals see https://reactjs.org/docs/portals.html for more information  */
     <Portal id='portal'>
       <ModalWrapper>
-        <Background />
+        <Background onClick={toggle} role='button' />
         <Card
           sx={{
             bg: `background`,
           }}
         >
           <CloseButton onClick={toggle}>
+            {/* creates an X icon */}
             <Icon color={iconColor} name='close' />
           </CloseButton>
           {children}
@@ -42,9 +45,7 @@ const Card = styled.div`
   grid-row: 1/2;
   position: relative;
   min-width: 350px;
-
   padding: 15px;
-
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1);
   z-index: 10;
 `;
@@ -63,7 +64,6 @@ const CloseButton = styled.button`
   background: transparent;
   right: 20px;
   padding: 5px;
-
   border: none;
   top: 20px;
 `;

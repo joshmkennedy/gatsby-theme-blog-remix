@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-theme-blog-remix",
+  "name": "@joshkennedy00/gatsby-theme-blog-remix",
   "version": "1.0.0",
   "description": "gatsby theme that extends gatsby blog",
   "main": "index.js",

@@ -15,7 +15,10 @@ export default function LogoGraphic({ isDark }) {
       }
     }
   `);
-
+  if (!data.logo) {
+    //just exit if no logo
+    return "";
+  }
   /* if it is darkmode use a the dark mode logo if exists */
   return (
     <img

@@ -91,6 +91,11 @@ module.exports = {
 - [x] add mobil menu with portal
 - [x] add artwork remix graphic
 - [x] change favicon to grapic 
+- [ ] export all components that should be shadowable form index.js in theme
+- [ ] theme options
+- [ ] components
+  - [ ] props
+  - [ ] component shadowing examples
 - [ ] create default images and metadata as placeholder
 -  [ ] comment like crazy all code
     - [x] components 

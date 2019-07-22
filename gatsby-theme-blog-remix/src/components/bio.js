@@ -26,10 +26,7 @@ const Bio = () => {
     avatar,
   } = data;
 
-  /**
-   * to be used in the author's name link
-   * currently the authors link pulls in their twitter profile
-   */
+  /**to be used in the author's name link currently the authors link pulls in their twitter profile*/
   //shadow this component to change
   const twitterInfo = social.reduce(obj =>
     obj.name === "twitter" ? obj : null
@@ -54,16 +51,26 @@ const Bio = () => {
             mr: 2,
             mb: 0,
             width: 48,
+            height: 48,
             borderRadius: 99999,
+            overflow: "hidden",
           })}
-          role='presentation'
-        />
+        >
+          <img
+            css={css({
+              width: `100%`,
+            })}
+            src='https://api.adorable.io/avatars/285/abott@adorable.png'
+            alt='presentation'
+            role='presentation'
+          />
+        </div>
       )}
       <Styled.p>
         <BioContent
-          author={author}
-          shortBio={shortBio}
-          socialURL={twitterInfo.url}
+          author={author || `siteMetadata author`}
+          shortBio={shortBio || `change in siteMetadata key shortBio`}
+          socialURL={twitterInfo.url || `https://twitter.com/hashtag/jamstack`}
         />
       </Styled.p>
     </Flex>

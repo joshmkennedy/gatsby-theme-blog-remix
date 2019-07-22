@@ -23,7 +23,7 @@ export default function NavLinks({ styles }) {
       </li>
       {data.site.siteMetadata.social.map(({ name, url }) => (
         <li key={url}>
-          <a href={url}>{name}</a>
+          <a href={url || `/`}>{name || `social siteMeta`}</a>
         </li>
       ))}
     </ul>

@@ -91,6 +91,7 @@ module.exports = {
 - [x] add mobil menu with portal
 - [x] add artwork remix graphic
 - [x] change favicon to grapic 
+- [ ] create default images and metadata as placeholder
 -  [ ] comment like crazy all code
     - [x] components 
     - [ ] templates

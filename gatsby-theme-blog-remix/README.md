@@ -84,22 +84,22 @@ module.exports = {
 
 
 <!-- Todos ( remove in production) -->
-todo: [X] set up site to be remix with all site metadata
-todo: [X] add logo to blog header
-todo: [X] change primary colors to samon and orange
-todo: [X] add menu to header
-todo: [X] add mobil menu with portal
-todo: [X] add artwork remix graphic
-todo: [x] change favicon to grapic 
-todo: [ ] create modal component to work in mdx
-todo: [ ] comment like crazy all code
-  - [ ] components 
-  - [ ] templates
-  - [x] config
-  - [ ] gatsby node
-  - [ ] theme ui
-todo: [ ] create a real readme
-todo: [ ] copy and paste readme in all places
-todo: [ ] configure demo site index page to be a learning resource
-todo: [ ] deploy and setup on netlify
-todo: [ ] run through checklist
+- [x] set up site to be remix with all site metadata
+- [X] add logo to blog header
+- [x] change primary colors to samon and orange
+- [x] add menu to header
+- [x] add mobil menu with portal
+- [x] add artwork remix graphic
+- [x] change favicon to grapic 
+-  [ ] comment like crazy all code
+    - [x] components 
+    - [ ] templates
+    - [x] config
+    - [ ] gatsby node
+    - [ ] theme ui
+- [ ] create a real readme
+- [ ] copy and paste readme in all places
+- [ ] configure demo site index page to be a learning resource
+- [ ] deploy and setup on netlify
+- [ ] run through checklist
+  

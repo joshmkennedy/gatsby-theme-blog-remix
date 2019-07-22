@@ -28,7 +28,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-theme-blog-remix",
+      resolve: "@joshkennedy00/gatsby-theme-blog-remix",
       options: {
         basePath: "/",
       },

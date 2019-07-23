@@ -55,16 +55,7 @@ const Bio = () => {
             borderRadius: 99999,
             overflow: "hidden",
           })}
-        >
-          <img
-            css={css({
-              width: `100%`,
-            })}
-            src='https://api.adorable.io/avatars/285/abott@adorable.png'
-            alt='presentation'
-            role='presentation'
-          />
-        </div>
+        ></div>
       )}
       <Styled.p>
         <BioContent

@@ -15,18 +15,21 @@ export default function LogoGraphic({ isDark }) {
       }
     }
   `);
-  if (!data.logo) {
-    //just exit if no logo
-    return "";
-  }
+
   /* if it is darkmode use a the dark mode logo if exists */
   return (
-    <img
-      src={data[!isDark && data.darkLogo ? "darkLogo" : "logo"].publicURL}
-      alt='logo'
-      css={{
-        width: 24,
-      }}
-    />
+    <>
+      {data.logo ? (
+        <img
+          src={data[!isDark && data.darkLogo ? "darkLogo" : "logo"].publicURL}
+          alt='logo'
+          css={{
+            width: 24,
+          }}
+        />
+      ) : (
+        <></>
+      )}
+    </>
   );
 }

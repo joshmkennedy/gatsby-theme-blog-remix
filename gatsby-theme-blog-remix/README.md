@@ -96,7 +96,7 @@ module.exports = {
 - [ ] components
   - [ ] props
   - [ ] component shadowing examples
-- [ ] create default images and metadata as placeholder
+- [x] create default images and metadata as placeholder
 -  [ ] comment like crazy all code
     - [x] components 
     - [ ] templates

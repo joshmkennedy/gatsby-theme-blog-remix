@@ -38,6 +38,15 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
       mkdirp.sync(dir);
     }
   });
+
+  const componentsDir = path.join(
+    program.directory,
+    `./src/@joshkennedy00/gatsby-theme-blog-remix/components`
+  );
+  debug(`Initializing ${componentsDir} directory`);
+  if (!fs.existsSync(componentsDir)) {
+    mkdirp.sync(componentsDir);
+  }
 };
 
 const mdxResolverPassthrough = fieldName => async (

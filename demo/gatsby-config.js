@@ -42,7 +42,7 @@ module.exports = {
         background_color: `#F86278`,
         theme_color: `#F86278`,
         display: `standalone`,
-        icon: `src/images/remix-logo.svg`, // This path is relative to the root of the site.
+        icon: `./content/assets/logo.svg`, // This path is relative to the root of the site.
       },
     },
   ],

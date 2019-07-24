@@ -1,58 +1,181 @@
-# Gatsby Theme Jam Submission Example
+<p align="center">
+  <a href="https://gatsby-theme-blog-remix-demo.netlify.com">
+    <img alt="Gatsby" src="./content/assets/logo.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  The Gatsby blog theme <i>Remixed</i>
+</h1>
 
-This repo is an example and potential starting point for theme creators.
+![screenshot](theme-screenshot.png)
 
-It includes:
-- a bare-bones theme (located in `theme/`) that includes basic setup
-- a demo site (located in `demo/`) that installs the theme
-- a Yarn workspaces configuration so the theme and demo can be worked on simultaneously
+A remix of the classic Gatsby Blog Theme.
 
-## How to use this repo
+## Why this theme?
 
-**NOTE:** Make sure to replace `USERNAME` with your GitHub username and `THEMENAME` with your theme name.
+This theme took the tried and true Gatsby Theme Blog and added a splash of style and color. This theme does not do anything ground breaking but it is a great jumping off point. The theme's components are all easily shadowable, and have been themed by theme-ui to make the customization of easy as possible.
 
-1.  Fork this repo.
+### Features
 
-2.  Rename the forked repo `gatsby-theme-THEMENAME`. (Make sure to replace `THEMENAME` with your chosen name.)
+- Theme-ui
+- Easy to shadow components
+- Pre-built name-spaced component shadowing folder
+- Light and Darkmode
+- MDX support
+- Desktop and Mobile Navigation component
+- Portals
 
-3.  Get the theme set up locally.
-    ```sh
-    # clone the repo
-    git clone git@github.com:USERNAME/gatsby-theme-THEMENAME.git
+## Installation
 
-    # move into the directory
-    cd gatsby-theme-THEMENAME
+### Use the blog remixed theme starter in a new site
 
-    # install dependencies
-    yarn
-    ```
+This will generate a new site that pre-configures use of the blog theme.
 
-4.  Update `theme/package.json` with your info.
-    ```diff
+```sh
+gatsby new my-themed-blog https://github.com/joshatoutthink/gatsby-theme-blog-remix-demo
+```
+
+### Manually add to your site
+
+```sh
+npm install --save @joshkennedy00/gatsby-theme-blog-remix
+```
+
+## Usage
+
+### Theme options
+
+| Key           | Default value     | Description                                                                                               |
+| ------------- | ----------------- | --------------------------------------------------------------------------------------------------------- |
+| `basePath`    | `/`               | Root url for all blog posts                                                                               |
+| `contentPath` | `/content/posts`  | Location of blog posts                                                                                    |
+| `assetPath`   | `/content/assets` | Location of assets                                                                                        |
+| `mdx`         | `true`            | Configure `gatsby-plugin-mdx` (if your website already is using the plugin pass `false` to turn this off) |
+
+---
+
+#### Example usage
+
+```js
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {
+        // basePath defaults to `/`
+        basePath: `/blog`,
+      },
+    },
+  ],
+};
+```
+
+---
+
+### Additional configuration
+
+#### Site Metadata
+
+In addition to the theme options, there are a handful of items you can customize via the `siteMetadata` object in your site's `gatsby-config.js`
+
+```js
+// gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    // Used for the site title and SEO
+    title: `Gatsby Theme Remix`,
+    // Used to provide alt text for your avatar
+    author: `Josh Kennedy`,
+    //used in the post footer
+    shortBio: `a web designer and developer.`,
+    // Used for SEO
+    description: `This is a remix of the theme Gatsby Theme Blog. Changed some styling, added some components, also made extra comments to make extending this theme easier`,
+    // Used for social links in the root footer
+    social: [
       {
-    +   "name": "gatsby-theme-THEMENAME",
-    +   "author": "Your Name <name@example.com>",
-        "repository": {
-          "type": "git",
-    +     "url": "https://github.com/USERNAME/gatsby-theme-THEMENAME.git"
-        },
-    ```
+        name: `twitter`,
+        url: `https://twitter.com/JoshKen08672181`,
+      },
+      {
+        name: `github`,
+        url: `https://github.com/joshatoutthink`,
+      },
+    ],
+  },
+};
+```
 
-5.  Start the demo site.
-    ```sh
-    yarn workspace demo develop
-    ```
+#### Images
 
-    The demo will start at http://localhost:8000
+this theme comes with the option to add:
 
-    **NOTE:** If you’re new to Yarn workspaces, check out [this post](https://www.gatsbyjs.org/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) for details.
+- site logo
+- author avatar
 
-6.  Start editing the theme! The demo site is configured to use the local theme, so any changes you make to the local `theme` directory will be reflected on the demo site for easy local development.
+##### Site logo
 
-7.  Follow the [submission checklist](./theme/README.md#submission-checklist) to make sure your theme qualifies to win!
+- Place a svg, jpg, or png named _logo_ in the assets folder.
 
-8.  [Submit your theme](https://themejam.gatsbyjs.org/submit) to win!
+- There is also the option to add a darkmode version of the logo. To add this logo maker sure to name it _logo-dark_.
 
-## More information
+##### Author Avatar
 
-For contest rules and more information, see [the Theme Jam website](https://themejam.gatsbyjs.org).
+- Place a jpg, or png named avatar in the assets folder.
+
+## Customize Components
+
+this theme's layout uses theme-ui's layout components. Within those components exists modular components that makes it easy to shadow, and create your own remix.
+
+### Theme-ui
+
+[ add theme-ui docs and example ]
+
+### Shadowing a Component
+
+To shadow a component or edit the components from this theme you copy the component into your site with this folder structure:
+
+```
+./src/THEMENAME/components
+```
+
+However this theme Prebuilds a name-spaced folder in your source folder for you. All you have to do is paste in the components into the prebuild name-spaced components folder. All maker all paths reference other compents change from
+
+```JS
+import Navigation from './Navigation'
+```
+
+to
+
+```JS
+import { Navigation } from '@joshkennedy00/gatsby-theme-blog-remix'
+```
+
+once the component is copied over you can delete, add, and edit till you are blue in the face.
+
+<!-- Todos ( remove in production) -->
+
+- [x] set up site to be remix with all site metadata
+- [x] add logo to blog header
+- [x] change primary colors to samon and orange
+- [x] add menu to header
+- [x] add mobil menu with portal
+- [x] add artwork remix graphic
+- [x] change favicon to grapic
+- [ ] export all components that should be shadowable form index.js in theme
+- [ ] theme options
+- [ ] components
+  - [ ] props
+  - [ ] component shadowing examples
+- [x] create default images and metadata as placeholder
+- [ ] comment like crazy all code
+  - [x] components
+  - [ ] templates
+  - [x] config
+  - [ ] gatsby node
+  - [ ] theme ui
+- [ ] create a real readme
+- [ ] copy and paste readme in all places
+- [ ] configure demo site index page to be a learning resource
+- [x] deploy and setup on netlify
+- [ ] run through checklist

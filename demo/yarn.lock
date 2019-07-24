@@ -1443,7 +1443,7 @@
     core-js "^2.5.7"
 
 "@joshkennedy00/gatsby-theme-blog-remix@*":
-  version "1.0.3"
+  version "1.0.4"
   resolved "https://registry.yarnpkg.com/@joshkennedy00/gatsby-theme-blog-remix/-/gatsby-theme-blog-remix-1.0.3.tgz#8f119591faff65e8592c2c2bdb485368e9ec1d85"
   integrity sha512-3+K29CPkiwVusDkj24WPMK2urJZfSwJq+ZLbZXhwH3C7gCx7arty0eV6d3i5RYhan5bauce+gfxjUI94WeY+5A==
   dependencies:

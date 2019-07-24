@@ -24,7 +24,6 @@ const GlobalStyles = () => {
         h3 {
           font-family: ${heading};
           font-weight: 900;
-          margin: 30px;
         }
         .logo {
           font-weight: 900;

@@ -13,13 +13,13 @@ const lightGray = `hsla(0, 0%, 0%, 0.2)`;
 const samon = `#F86278`;
 const darkSamon = `#FA9EAC`;
 const yellow = `#FFE69B`;
-//const lightBlue = `#E0DEFF`;
+const lightBlue = `#E0DEFF`;
 
 export default {
   text: grey90,
   background: white,
   primary: samon,
-  secondary: yellow,
+  secondary: darkSamon,
   muted: lightGray,
   highlight: opaqueLightYellow,
   heading: grey90,
@@ -43,7 +43,7 @@ export default {
       text: `white`,
       background: grey90,
       primary: darkSamon,
-      secondary: yellow,
+      secondary: lightBlue,
       muted: opaqueLightWhite,
       highlight: purple60,
       heading: white,

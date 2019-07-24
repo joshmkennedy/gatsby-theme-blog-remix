@@ -21,7 +21,6 @@ export default {
     fontFamily: `monospace`,
     tabSize: 4,
     hyphens: `none`,
-    marginBottom: `200px`,
     color: `white`,
     bg: `prism.background`,
     overflow: `auto`,
@@ -73,6 +72,7 @@ export default {
     fontFamily: `heading`,
   },
   h2: {
+    marginTop: `30px`,
     fontFamily: `heading`,
   },
 };

@@ -7,9 +7,6 @@ import prism from "./prism";
 export default merge({}, typography, {
   initialColorMode: `light`,
   colors,
-  pre: {
-    marginBottom: `20px`,
-  },
   fonts: {
     heading: `Montserrat, sans-serif`,
     monospace: `Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,

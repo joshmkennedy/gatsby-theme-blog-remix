@@ -12,9 +12,10 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "@joshkennedy00/gatsby-theme-blog-remix": "*",
+    "@stefanprobst/lokijs": "^1.5.6-b",
     "gatsby": "^2.13.2",
     "gatsby-plugin-manifest": "^2.2.3",
-    "@joshkennedy00/gatsby-theme-blog-remix": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },

@@ -20,7 +20,6 @@ export { default as Layout } from "./src/components/Layout";
 export { default as LayoutHeader } from "./src/components/LayoutHeader";
 export { default as LayoutMain } from "./src/components/LayoutMain";
 
-export { default as LogoGraphic } from "./src/components/LogoGraphic";
 export { default as NavLinks } from "./src/components/NavLinks";
 export { default as PageArtWork } from "./src/components/PageArtWork";
 export { default as PostFooter } from "./src/components/post-footer";
@@ -31,8 +30,3 @@ export { default as Switch } from "./src/components/switch";
 
 export { default as PostTemplate } from "./src/templates/post";
 export { default as PostsTemplate } from "./src/templates/posts";
-
-
-
-
-

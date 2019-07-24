@@ -64,9 +64,11 @@ export default function Navigation() {
         {({ toggle, on }) => (
           <>
             <button
+              aria-label='mobile menu'
               sx={{
                 display: ["block", "none"],
               }}
+              role='button'
               css={{ background: "transparent", border: "none" }}
               onClick={toggle}
             >

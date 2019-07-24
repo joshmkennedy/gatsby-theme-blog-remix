@@ -10,7 +10,7 @@ const opaqueLightWhite = `hsla(0, 0%, 100%, 0.2)`;
 const lightGray = `hsla(0, 0%, 0%, 0.2)`;
 
 //remixes colors
-const samon = `#F86278`;
+const samon = `#e62b46`;
 const darkSamon = `#FA9EAC`;
 const yellow = `#FFE69B`;
 const lightBlue = `#E0DEFF`;

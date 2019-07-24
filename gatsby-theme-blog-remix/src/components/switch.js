@@ -5,6 +5,7 @@ import { css } from "theme-ui";
 /* this is the toggle used in the darkmode toggle */
 export const Switch = props => (
   <ReactSwitch
+    aria-checked={props.checked}
     {...props}
     css={css({
       bg: `primary`,

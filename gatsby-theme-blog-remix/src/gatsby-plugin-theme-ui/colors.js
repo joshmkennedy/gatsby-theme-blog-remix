@@ -19,7 +19,7 @@ export default {
   text: grey90,
   background: white,
   primary: samon,
-  secondary: darkSamon,
+  secondary: "#3F51B5",
   muted: lightGray,
   highlight: opaqueLightYellow,
   heading: grey90,

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://gatsby-theme-blog-remix-demo.netlify.com">
-    <img alt="Gatsby" src="./content/assets/logo.svg" width="60" />
+    <img alt="Gatsby" src="logo.svg" width="60" />
   </a>
 </p>
 <h1 align="center">

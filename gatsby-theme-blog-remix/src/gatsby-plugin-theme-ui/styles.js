@@ -21,7 +21,7 @@ export default {
     fontFamily: `monospace`,
     tabSize: 4,
     hyphens: `none`,
-    marginBottom: 0,
+    marginBottom: `200px`,
     color: `white`,
     bg: `prism.background`,
     overflow: `auto`,

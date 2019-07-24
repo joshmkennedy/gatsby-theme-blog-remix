@@ -39,6 +39,7 @@ const heading = Tag => props => (
       css={css({
         ml: `-20px`,
         pr: `4px`,
+        marginTop: `20px`,
         color: `primary`,
       })}
     >

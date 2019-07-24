@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  The Gatsby blog theme <i>Remixed</i>
+  The Gatsby blog theme <strong><i>Remixed</i></strong>
 </h1>
 
 ![screenshot](theme-screenshot.png)
@@ -13,7 +13,7 @@ A remix of the classic Gatsby Blog Theme.
 
 ## Why this theme?
 
-This theme took the tried and true Gatsby Theme Blog and added a splash of style and color. This theme does not do anything ground breaking but it is a great jumping off point. The theme's components are all easily shadowable, and have been themed by theme-ui to make the customization of easy as possible.
+Gatsby Blog **_Remix_** takes the tried and true Gatsby Theme Blog and adds a splash of style and color. This theme is a great jumping off point to get you started. The Gatsby Blog **_Remix_** components are all easily shadowable, and have been themed by theme-ui to make the customization of easy as possible.
 
 ### Features
 
@@ -29,7 +29,7 @@ This theme took the tried and true Gatsby Theme Blog and added a splash of style
 
 ### Use the blog remixed theme starter in a new site
 
-This will generate a new site that pre-configures use of the blog theme.
+This will generate a new site that pre-configures use of Gatsby Blog **_Remix_**.
 
 ```sh
 gatsby new my-themed-blog https://github.com/joshatoutthink/gatsby-theme-blog-remix-demo
@@ -108,7 +108,7 @@ module.exports = {
 
 #### Images
 
-this theme comes with the option to add:
+Gatsby Blog **_Remix_** comes with the option to add:
 
 - site logo
 - author avatar
@@ -125,13 +125,11 @@ this theme comes with the option to add:
 
 ## Customize Components
 
-this theme's layout uses theme-ui's layout components. Within those components exists modular components that makes it easy to shadow, and create your own remix.
-
-### Theme-ui
-
-[ add theme-ui docs and example ]
+Gatsby Blog **_Remix_** layout uses theme-ui's layout components. Within those components exists modular components that makes it easy to shadow, and create your own remix.
 
 ### Shadowing a Component
+
+#### Components
 
 To shadow a component or edit the components from this theme you copy the component into your site with this folder structure:
 
@@ -153,29 +151,17 @@ import { Navigation } from '@joshkennedy00/gatsby-theme-blog-remix'
 
 once the component is copied over you can delete, add, and edit till you are blue in the face.
 
-<!-- Todos ( remove in production) -->
+#### Templates
 
-- [x] set up site to be remix with all site metadata
-- [x] add logo to blog header
-- [x] change primary colors to samon and orange
-- [x] add menu to header
-- [x] add mobil menu with portal
-- [x] add artwork remix graphic
-- [x] change favicon to grapic
-- [ ] export all components that should be shadowable form index.js in theme
-- [ ] theme options
-- [ ] components
-  - [ ] props
-  - [ ] component shadowing examples
-- [x] create default images and metadata as placeholder
-- [ ] comment like crazy all code
-  - [x] components
-  - [ ] templates
-  - [x] config
-  - [ ] gatsby node
-  - [ ] theme ui
-- [ ] create a real readme
-- [ ] copy and paste readme in all places
-- [ ] configure demo site index page to be a learning resource
-- [x] deploy and setup on netlify
-- [ ] run through checklist
+The Gatsby Blog **_Remix_** theme only creates the components folder automatically. If you would like to shadow the post template and posts template you will have add the templates folder to the @joshkennedy00/gatsby-theme-blog-remix folder.
+
+## Customizing the Style
+
+Gatsby Blog **_Remix_** uses [theme UI](https://theme-ui.com/) to style the components and mdx. Take a look at their documentation to learn more about styling this theme and making it your own.
+
+#### [theme-ui docs](https://theme-ui.com/getting-started)
+
+## Portals
+
+Blog Remix's mobile navigation makes use of react portals. They are fun ways to have modals, mobile navigations, and overlays. Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component without having to do any redux or global store nonesense. See react's [portals](https://reactjs.org/docs/portals.html), or just use the component included in this theme.
+also see [Scott Tolinski's tutorial on Portals](https://www.leveluptutorials.com/tutorials/level-2-react/creating-a-reuseable-portal)

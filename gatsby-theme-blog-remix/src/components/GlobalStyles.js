@@ -16,11 +16,15 @@ const GlobalStyles = () => {
         body {
           margin: 0;
         }
+        pre {
+          margin-bottom: 20px;
+        }
         h1,
         h2,
         h3 {
           font-family: ${heading};
           font-weight: 900;
+          margin: 30px;
         }
         .logo {
           font-weight: 900;

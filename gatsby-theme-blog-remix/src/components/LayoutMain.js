@@ -22,16 +22,22 @@ export default function LayoutMain({ children }) {
           zIndex: -1,
         }}
       />
-      <span
-        sx={{
-          position: `absolute`,
-          top: `5vh`,
-          right: `5vw`,
-        }}
-      >
-        <DarkModeToggle isDark={isDark} toggleColorMode={toggleColorMode} />
-      </span>
-      <Container sx={{ maxWidth: `container` }}>{children}</Container>
+
+      <Container sx={{ maxWidth: `container` }}>
+        <>
+          <span
+            sx={{
+              position: `absolute`,
+              top: `4vh`,
+              right: [`40px`, `40px`, `0px`],
+            }}
+          >
+            <DarkModeToggle isDark={isDark} toggleColorMode={toggleColorMode} />
+          </span>
+
+          {children}
+        </>
+      </Container>
     </Main>
   );
 }

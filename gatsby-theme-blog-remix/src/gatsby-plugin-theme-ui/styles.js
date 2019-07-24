@@ -11,6 +11,10 @@ export default {
   Main: {
     position: `relative`,
   },
+  Container: {
+    position: `relative`,
+    padding: [`70px 40px`, `70px 40px`, `90px 0`],
+  },
 
   pre: {
     variant: `prism`,

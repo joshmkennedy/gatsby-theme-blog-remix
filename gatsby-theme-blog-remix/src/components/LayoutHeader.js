@@ -32,8 +32,10 @@ export default function LayoutHeader() {
     >
       <div
         sx={{
-          width: `container`,
-          mx: "auto",
+          mx: `auto`,
+          px: [`20px`, `40px`, `0px`],
+          width: `100%`,
+          maxWidth: `container`,
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",

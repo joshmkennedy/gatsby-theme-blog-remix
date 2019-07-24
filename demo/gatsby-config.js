@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     // Used for the site title and SEO
-    title: `Gatsby Theme Remix`,
+    title: `Gatsby Blog Remix`,
     // Used to provide alt text for your avatar
     author: `Josh Kennedy`,
     //used in the post footer

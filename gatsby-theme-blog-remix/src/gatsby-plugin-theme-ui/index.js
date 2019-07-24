@@ -12,7 +12,7 @@ export default merge({}, typography, {
     monospace: `Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace`,
   },
   sizes: {
-    container: 672, //this sets the max width of the content
+    container: 600, //this sets the max width of the content
   },
   breakpoints: ["600px", "1100px", "1100px"],
   styles,

@@ -1,6 +1,6 @@
 {
   "name": "@joshkennedy00/gatsby-theme-blog-remix",
-  "version": "1.0.62",
+  "version": "1.0.7",
   "description": "gatsby theme that extends gatsby blog",
   "main": "index.js",
   "repository": {

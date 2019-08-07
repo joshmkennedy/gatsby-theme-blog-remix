@@ -16,7 +16,7 @@ const Posts = ({ location, posts, siteTitle, socialLinks }) => (
       return (
         <Fragment key={node.slug}>
           <SEO title='Home' keywords={keywords} />
-          <div>
+          <Styled.root>
             <Styled.h2
               css={css({
                 mb: 1,
@@ -34,7 +34,7 @@ const Posts = ({ location, posts, siteTitle, socialLinks }) => (
             </Styled.h2>
             <small>{node.date}</small>
             <Styled.p>{node.excerpt}</Styled.p>
-          </div>
+          </Styled.root>
         </Fragment>
       );
     })}

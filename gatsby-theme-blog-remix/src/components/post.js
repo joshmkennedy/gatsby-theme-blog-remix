@@ -31,13 +31,13 @@ const Post = ({
     >
       {post.date}
     </Styled.p>
-    <div
+    <Styled.root
       css={{
         paddingTop: `50px`,
       }}
     >
       <MDXRenderer>{post.body}</MDXRenderer>
-    </div>
+    </Styled.root>
     <PostFooter {...{ previous, next }} />
   </Layout>
 );

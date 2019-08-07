@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Styled } from "theme-ui";
 
 /**
@@ -8,12 +8,11 @@ import { Styled } from "theme-ui";
  */
 
 export default ({ socialURL, shortBio, author }) => {
-  console.log(socialURL);
   return (
-    <Fragment>
+    <Styled.root>
       Words by <Styled.a href={socialURL}>{author}</Styled.a>,
       <br />
       {shortBio}
-    </Fragment>
+    </Styled.root>
   );
 };

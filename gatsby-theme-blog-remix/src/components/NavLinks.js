@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
 /* Shadow me to change the Navigation Links */
 export default function NavLinks({ styles }) {

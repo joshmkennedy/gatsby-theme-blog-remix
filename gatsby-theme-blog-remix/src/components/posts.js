@@ -10,6 +10,7 @@ import Footer from "../components/home-footer";
 
 const Posts = ({ location, posts, siteTitle, socialLinks }) => (
   <Layout location={location} title={siteTitle}>
+    <Styled.root>
     {posts.map(({ node }) => {
       const title = node.title || node.slug;
       const keywords = node.keywords || [];
@@ -40,6 +41,7 @@ const Posts = ({ location, posts, siteTitle, socialLinks }) => (
     })}
 
     <Footer socialLinks={socialLinks} />
+    </Styled.root>
   </Layout>
 );
 

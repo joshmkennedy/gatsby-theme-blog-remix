@@ -20,25 +20,27 @@ const Post = ({
 }) => (
   <Layout location={location} title={title}>
     <SEO title={post.title} description={post.excerpt} />
-    <Styled.h1>{post.title}</Styled.h1>
+    <Styled.root>
+      <Styled.h1>{post.title}</Styled.h1>
 
-    <Styled.p
-      css={css({
-        fontSize: 1,
-        mt: -3,
-        mb: 3,
-      })}
-    >
-      {post.date}
-    </Styled.p>
-    <div
-      css={{
-        paddingTop: `50px`,
-      }}
-    >
-      <MDXRenderer>{post.body}</MDXRenderer>
-    </div>
-    <PostFooter {...{ previous, next }} />
+      <Styled.p
+        css={css({
+          fontSize: 1,
+          mt: -3,
+          mb: 3,
+        })}
+      >
+        {post.date}
+      </Styled.p>
+      <div
+        css={{
+          paddingTop: `50px`,
+        }}
+      >
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </div>
+      <PostFooter {...{ previous, next }} />
+    </Styled.root>
   </Layout>
 );
 

@@ -14,7 +14,7 @@
   "dependencies": {
     "@joshkennedy00/gatsby-theme-blog-remix": "*",
     "@stefanprobst/lokijs": "^1.5.6-b",
-    "gatsby": "^2.13.2",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-manifest": "^2.2.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
